@@ -19,4 +19,24 @@ function agregarAmigo(){
     //4.- Limpiamos el cuadro de texto
     nombreAmigo.value = "";
     console.log(amigos);
+
+}   
+
+function mostrarLista() {
+    //1.- Capturamos el elemento donde se mostrarán los amigos
+    let lista = document.getElementById("listaAmigos");
+    
+    //2.- Limpiamos la lista antes de mostrar los amigos
+    lista.innerHTML = "";
+
+    //3.- Iteramos sobre el array de amigos y los mostramos en la lista
+    for (let i = 0; i < amigos.length; i++) {
+        //4.- Creamos un nuevo elemento de lista
+        let li = document.createElement("li");
+        //5.- Asignamos el nombre del amigo al elemento de lista
+        li.textContent = amigos[i];
+        //6.- Agregamos el elemento de lista a la lista
+        lista.appendChild(li);
+    }
+    
 }
