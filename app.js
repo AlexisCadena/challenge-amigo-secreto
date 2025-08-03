@@ -6,5 +6,10 @@ let amigos = [];
 function agregarAmigo(nombre){
     //1.- Capturamos el valor del la entrada del cuadro de texto
     let nombreAmigo = document.getElementById("nombre");
-    
+
+    //2.- Validamos que el cuadro de texto donde se ingresará el nombre no se encuentre vacío
+    if(nombreAmigo.value.trim() === ""){
+        alert("Por favor, inserte un nombre");
+        return;
+    }
 }
