@@ -16,5 +16,7 @@ function agregarAmigo(){
     //3.- Agregamos el nombre del amigo al array
     amigos.push(nombreAmigo.value);
 
+    //4.- Limpiamos el cuadro de texto
+    nombreAmigo.value = "";
     console.log(amigos);
 }
