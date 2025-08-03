@@ -20,6 +20,9 @@ function agregarAmigo(){
     nombreAmigo.value = "";
     console.log(amigos);
 
+    //5.- Llamamos a la función para mostrar la lista de amigos
+    mostrarLista();
+
 }   
 
 function mostrarLista() {
