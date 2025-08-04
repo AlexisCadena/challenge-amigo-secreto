@@ -43,3 +43,29 @@ function mostrarLista() {
     }
     
 }
+
+function sortearAmigo() {
+    //1.- Verificamos si hay amigos en la lista
+    if (amigos.length === 0) {
+        alert("No hay amigos para sortear");
+        return;
+    }
+    //2.- Generamos un índice alaetorio para seleccionar un amigo
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+
+    //3.- Obtenemos el amigo seleccionado
+    let amigoSeleccionado = amigos[indiceAleatorio];
+
+    //4.- Mostramos el amigo seleccionado en el ul = resultado
+    let listaResultado = document.getElementById("resultado");
+    listaResultado.innerHTML = ""; // Limpiamos el resultado anteriorl
+
+    let li = document.createElement("li");
+    li.textContent = `Tu amigo secreto es: ${amigoSeleccionado}`;
+    listaResultado.appendChild(li);
+
+    //5.- Limpiamos el array de amigos para que no se pueda sortear más de una vez
+    amigos = [];
+    console.log(amigos);    
+    document.getElementById("listaAmigos").innerHTML = ""; // Limpiar lista de amigos
+}
