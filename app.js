@@ -23,6 +23,9 @@ function agregarAmigo(){
     //5.- Llamamos a la función para mostrar la lista de amigos
     mostrarLista();
 
+    //6.- Limpiamos el resultado anterior
+    document.getElementById("resultado").innerHTML = ""; // Limpiar resultado del juago anterior
+
 }   
 
 function mostrarLista() {
